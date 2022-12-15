@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "netcat-repl": "^1.0.1"
+  }
+}
