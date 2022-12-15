@@ -1,0 +1,11 @@
+10
+5,GET,uri5,file5,404
+1,GET,uri1,file1,404
+2,GET,uri4,file2,404
+4,GET,uri3,file4,404
+3,PUT,uri4,infile2,Created201
+0,PUT,uri5,infile0,Created201
+9,GET,uri3,file9,404
+6,GET,uri3,file6,200
+7,PUT,uri3,infile3,Created201
+8,GET,uri5,file8,200

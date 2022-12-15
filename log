@@ -1,0 +1,10 @@
+GET,/uri5,404,5
+PUT,/uri5,201,0
+GET,/uri1,404,1
+GET,/uri4,404,2
+PUT,/uri4,201,3
+GET,/uri3,404,4
+GET,/uri3,404,9
+PUT,/uri3,201,7
+GET,/uri3,200,6
+GET,/uri5,200,8
