@@ -1,4 +1,4 @@
-#Assignment 4 : Multi-Threaded HTTP Server
+Multi-Threaded HTTP Server
 ---
 #How to Build/Run:
 -run make to compile httpserver binary file and create object httpserver.o
