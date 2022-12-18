@@ -1,11 +1,11 @@
 Multi-Threaded HTTP Server
 ---
-#How to Build/Run:
+How to Build/Run:
 -run make to compile httpserver binary file and create object httpserver.o
 -make clean removes binary file and httpserver.o from directory
 ---
 ---
-#Functionality : <br />
+Functionality : <br />
 -type ./httpserver [-t threads] [-l logfile] <port><br />
 -port is an integer that the server will listen into<br />
 -threads is number of threads program will run (still in progress)<br />
@@ -22,16 +22,16 @@ of the URI and also a status code that indicates if it's successful or not. <br 
 of the file but rather just shows its status.<br />
 ---
 ---
-#To run tests : <br />
+To run tests : <br />
 <br />
-#For Single-Threaded tests:
+For Single-Threaded tests:
 -make sure test_files and test_script directories are all in the same directory as httpserver binary file<br />
 -execute the test scripts from the same directory as httpserver.  For example, ./test_scripts/put_binary_large.sh<br />
 -run "./test_scripts/run-all-test.sh" to run all Single-Threaded tests <br />
 -tests returns 0 for sucess and a non zero for failure.<br />
 <br />
-#For Multi-Threaded tests:<br />
-#Requirements:<br />
+For Multi-Threaded tests:<br />
+Requirements:<br />
 -python3.9 installed<br />
 <br />
 -run "./test_scripts/stress_test_runner.sh" to multithreaded tests<br />
