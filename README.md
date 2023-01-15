@@ -1,5 +1,7 @@
 Multi-Threaded HTTP Server
 ---
+-An HTTP Server that follows the HTTP 1.1 Protocol written in C.  It accepts requests and executes them with Multi-threading.  It prints logs to keep track of each request made.
+---
 How to Build/Run:
 -run make to compile httpserver binary file and create object httpserver.o
 -make clean removes binary file and httpserver.o from directory
