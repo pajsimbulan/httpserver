@@ -1,12 +1,11 @@
 Multi-Threaded HTTP Server
----
--An HTTP Server that follows the HTTP 1.1 Protocol written in C.  It accepts requests and executes them with Multi-threading.  It prints logs to keep track of each request made.
----
+**************************
+An HTTP Server that follows the HTTP 1.1 Protocol written in C.  It accepts requests and executes them with Multi-threading.  It prints logs to keep track of each request made.
+**************************
 How to Build/Run:
 -run make to compile httpserver binary file and create object httpserver.o
 -make clean removes binary file and httpserver.o from directory
----
----
+**************************
 Functionality : <br />
 -type ./httpserver [-t threads] [-l logfile] <port><br />
 -port is an integer that the server will listen into<br />
@@ -22,8 +21,7 @@ of the URI and also a status code that indicates if it's successful or not. <br 
 -PUT is when a client requests to add/create new data to a URI to the server<br />
 -HEAD is likely about the same procedure as GET, however it doesn't include the content
 of the file but rather just shows its status.<br />
----
----
+**************************
 To run tests : <br />
 <br />
 For Single-Threaded tests:
@@ -43,8 +41,8 @@ Parameters:<br />
 -threads: number of threads<br />
 -seed: helps guarantees deterministic results.<br />
 -num_requests: number of requests to send<br />
--num_uris: number of unique URI's to generate<br />
+-num_uris: number of unique URI's to generate<br /> 
 -num_files: number of unique files to generate<br />
 <br />
 Make sure to delete produced files and uris by the program for each tests.  Just run "rm file*" and "rm uri*" to delete most files<br />
----
+**************************
