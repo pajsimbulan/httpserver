@@ -36,7 +36,7 @@ Requirements:<br />
 <br />
 -run "./test_scripts/stress_test_runner.sh" to multithreaded tests<br />
 
-Note: stress_test_runner.sh have parameters you can change which will be stated below<br />
+Note: stress_test_runner.sh have parameters you can change <br />
 Parameters:<br />
 -threads: number of threads<br />
 -seed: helps guarantees deterministic results.<br />
