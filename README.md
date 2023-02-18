@@ -24,9 +24,9 @@ of the file but rather just shows its status.<br />
 **************************
 To run tests : <br />
 <br />
-For Single-Threaded tests:
--make sure test_files and test_script directories are all in the same directory as httpserver binary file<br />
--execute the test scripts from the same directory as httpserver.  For example, ./test_scripts/put_binary_large.sh<br />
+For Single-Threaded tests:<br />
+-make sure test_files and test_script directories are all in the same directory as httpserver binary file <br />
+-execute the test scripts from the same directory as httpserver.  For example, ./test_scripts/put_binary_large.sh <br />
 -run "./test_scripts/run-all-test.sh" to run all Single-Threaded tests <br />
 -tests returns 0 for sucess and a non zero for failure.<br />
 <br />
