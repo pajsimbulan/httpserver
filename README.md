@@ -7,7 +7,7 @@ How to Build/Run:<br />
 -make clean removes binary file and httpserver.o from directory<br />
 **************************
 Functionality : <br />
--type ./httpserver [-t threads] [-l logfile] <port><br />
+-type ./httpserver [-t threads] [-l logfile] [port] <br />
 -port is an integer that the server will listen into<br />
 -threads is number of threads program will run <br />
 -logfile is where requests are logs <br />
