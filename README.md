@@ -1,48 +1,82 @@
-Multi-Threaded HTTP Server
-**************************
-An HTTP Server that follows the HTTP 1.1 Protocol written in C.  It accepts requests and executes them with Multi-threading.  It prints logs to keep track of each request made.
-**************************
-How to Build/Run:<br />
--run make to compile httpserver binary file and create object httpserver.o<br />
--make clean removes binary file and httpserver.o from directory<br />
-**************************
-Functionality : <br />
--type ./httpserver [-t threads] [-l logfile] [port] <br />
--port is an integer that the server will listen into<br />
--threads is number of threads program will run <br />
--logfile is where requests are logs <br />
--the program runs a server that runs forever.<br />
--it listens and accepts connections from a client through the use of sockets<br />
--To communicate, it follows the HTTP 1.1 protocol<br />
--This program currently accepts three types of methods: GET, PUT, and HEAD <br />
--for GET, the server waits for a request and the client requests a file identified by <br />
-a URI which is given by the client.  The GET gives a reponse to the client with the content
-of the URI and also a status code that indicates if it's successful or not. <br />
--PUT is when a client requests to add/create new data to a URI to the server<br />
--HEAD is likely about the same procedure as GET, however it doesn't include the content
-of the file but rather just shows its status.<br />
-**************************
-To run tests : <br />
-<br />
-For Single-Threaded tests:<br />
--make sure test_files and test_script directories are all in the same directory as httpserver binary file <br />
--execute the test scripts from the same directory as httpserver.  For example, ./test_scripts/put_binary_large.sh <br />
--run "./test_scripts/run-all-test.sh" to run all Single-Threaded tests <br />
--tests returns 0 for sucess and a non zero for failure.<br />
-<br />
-For Multi-Threaded tests:<br />
-Requirements:<br />
--python3.9 installed<br />
-<br />
--run "./test_scripts/stress_test_runner.sh" to multithreaded tests<br />
+# Multi-threaded HTTP Server 1.1 in C
 
-Note: stress_test_runner.sh have parameters you can change <br />
-Parameters:<br />
--threads: number of threads<br />
--seed: helps guarantees deterministic results.<br />
--num_requests: number of requests to send<br />
--num_uris: number of unique URI's to generate<br /> 
--num_files: number of unique files to generate<br />
+This repository contains a basic implementation of an HTTP server using C language and POSIX threads. The server uses a multi-threaded model to handle incoming client connections ahttpservernd serve HTTP requests.
+
+## Functionalities
+
+The server supports the following HTTP methods:
+
+- `GET`: Responds to the client with the content of the requested URI and a status code indicating the success or failure of the request.
+- `PUT`: Allows a client to add or create new data on the server by specifying a URI.
+- `HEAD`: Similar to the `GET` method, but only returns the status of the requested file without its content.
+
+## Components
+
+The server implementation consists of the following source files:
+
+1. `httpserver.c`: The main file for the server, where the server is initialized, and the incoming connections are handled by worker threads.
+2. `bind.c` and `bind.h`: These files contain the implementation of a function to create a listening socket. The function takes a port number as an argument, binds to it, and listens for incoming connections.
+3. `queue.c` and `queue.h`: These files contain the implementation of a thread-safe queue data structure. The queue is used to store client connections to be processed by worker threads.
+4. `Makefile`: The Makefile is used to build the server program using the `clang` compiler with strict warning flags.
+
+## Building
+
+To build the server program, run the following command in the terminal:
+
+```sh
+make
+
+```
+## Usage
+To start the server, run the following command:
+
+```sh
+./httpserver <port>
+```
+
+Replace <port> with the desired port number on which the server should listen for incoming connections.
+
+# Running Tests
+
 <br />
-Make sure to delete produced files and uris by the program for each tests.  Just run "rm file*" and "rm uri*" to delete most files<br />
-**************************
+
+## Single-Threaded Tests
+1. Ensure that the **test_files** and **test_scripts** directories are in the same directory as the **httpserver** binary file.<br />
+2. Execute the test scripts from the same directory as httpserver. For example, 
+```sh
+ ./test_scripts/put_binary_large.sh.
+```
+
+ 
+3. Run 
+```sh
+ ./test_scripts/run-all-tests.sh
+``` 
+  to run all single-threaded tests.<br />
+  
+4. Tests return 0 for success and a non-zero value for failure.<br /> <br /> <br /> 
+
+## Multi-Threaded Tests
+Requirements:<br />
+
+- Python 3.9 installed<br />
+1. Run 
+```sh
+./test_scripts/stress_test_runner.sh
+```
+to run multi-threaded tests.<br />
+
+Note: **stress_test_runner.sh** has parameters you can change:
+
+- **threads**: number of threads
+- **seed**: helps guarantee deterministic results
+- **num_requests**: number of requests to send
+- **num_uris**: number of unique URIs to generate
+- **num_files**: number of unique files to generate
+<br />
+Make sure to delete the produced files and URIs by the program after each test. Run rm file* and rm uri* to delete most files.
+
+# License
+This project is open-source and available under the MIT License.
+
+
