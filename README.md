@@ -76,7 +76,37 @@ Note: **stress_test_runner.sh** has parameters you can change:
 <br />
 Make sure to delete the produced files and URIs by the program after each test. Run rm file* and rm uri* to delete most files.
 
+# Screenshots 
+
+**Server Listening**
+<br />
+<img src="./screenshots/httpserver_listening.jpg"  alt="img" />
+<br /><br />
+
+**Single Thread Test**
+<br />
+<img src="./screenshots/httpserver_singlethread_test.jpg"  alt="img" />
+<br /><br />
+
+**Multi-thread Test 1**
+<br />
+<img src="./screenshots/httpserver_multithreading_test.jpg"  alt="img" />
+<br /><br />
+
+**Multi-thread Test 2**
+<br />
+<img src="./screenshots/httpserver_multithreading_test2.jpg"  alt="img" />
+<br /><br />
+
+**Multi-thread Log**
+<br />
+<img src="./screenshots/httpserver_multithreading_log.jpg"  alt="img" />
+<br /><br />
+
+
 # License
 This project is open-source and available under the MIT License.
+
+
 
 

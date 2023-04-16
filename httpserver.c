@@ -314,6 +314,7 @@ int main(int argc, char *argv[]) {
         tdata_arr[i].active = false;
         client_socket_arr[i] = -1;
     }
+    printf("Listening on port %d...\n", port);
     while (1) {
         client_socket = accept(server_socket, (struct sockaddr *) &client_addr, &client_addr_size);
         for (int i = 0;; i++) {
