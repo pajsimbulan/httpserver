@@ -1,6 +1,6 @@
 # Multi-threaded HTTP Server 1.1 in C
 
-This repository contains a basic implementation of an HTTP server using C language and POSIX threads. The server uses a multi-threaded model to handle incoming client connections ahttpservernd serve HTTP requests.
+This repository contains a basic implementation of an HTTP server using C language and POSIX threads. The server uses both single-thrad and multi-threaded model to handle incoming client connections and serve HTTP requests.  Mutex lock with conditions is implemented on a queue to provide a thread-safety queue
 
 ## Functionalities
 
