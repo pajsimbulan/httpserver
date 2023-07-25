@@ -31,10 +31,12 @@ make
 To start the server, run the following command:
 
 ```sh
-./httpserver <port>
+./httpserver [-t threads] [-l logfile] <port>
 ```
 
-Replace <port> with the desired port number on which the server should listen for incoming connections.
+ - Specify number of thread by adding option `-t n` where n is number of threads.  Default number of threads is 4<br />
+ - Specify logfile by adding option `-l f` where f is the file.  Default logfile will automically be created.<br />
+ - Replace <port> with the desired port number on which the server should listen for incoming connections.<br />
 
 # Running Tests
 
